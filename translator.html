@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title> Translater </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Rubik:400,600" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<style>
+body { margin-top:100px; margin-left: 0px; font-family: Rubik; position:fixed; top:0; width:100%; height:100%;}
+* { font-family: Rubik;}
+#container { background:dodgerblue; padding-bottom:5px; }
+.select-lang { Text-align: center;}
+.select-lang span:nth-child(1) { float: left;}
+.select-lang span:nth-child(2) { display: inline-block; padding:10px; color: white;}
+.select-lang span:nth-child(3) { float: right;}
+.select-lang span select { padding:10px; background-color: lightskyblue; border: none; color:  #fff; font-family: Rubik;}
+.translater-text { background: white; margin:0 5px 0px 5px; overflow:hidden;}
+.translater-text textarea { border: none; width:90%; font-size:18px; padding:10px; height:50px; outline: none; }
+#translate { padding:10px; background: #BDB76B; border: none; border-radius:3px;color:#222; font-weight: bold; margin:0 5px 5px 5px; float: right;}
+#clear { padding:10px; background: transparent; border: none; color:#222; font-weight: bold; margin:0 5px 5px 5px;}
+#clear .fa { margin-right:5px; color: dodgerblue; font-size:18px;}
+.output {background: lavender; border-bottom:1px solid dodgerblue; }
+#output { background: transparent; width:100%; border: none; font-size:18px; padding:10px; }
+#output:hover { height: 150px; outline: none;}
+.output span { display:block; color:Dodgerblue; text-align: right; padding:10px;}
+</style>  
+<script>
+    $(function() {
+     var lang1 = [ "en"];
+     var lang1txt = [ "English"];
+     var lang2 = ["hi","it-IT", "fr", "de","zh-cn", "ko", "es", "id", "pt", "ru", "ja","pl","gu","mr","pa","es"];
+     var lang2txt = ["Hindi", "Italy", "French", "German","Chinese", "Korea", "Espana", "Bahasa Indonesia", "Portugal", "Russian", "Japanese","Polish","Gujarati","Marathi","Punjabi","Spanish"];
+     var elm = { "lang1": $("#lang1"), "lang2": $("#lang2"), "user": $("#lang1"), "output": $("#lang2"), "userInput": $("#user"), "langOutput": $("#output") }
+     for (let i in lang1) {  elm.lang1.append(  "<option value='" + lang1[i] + "'>" + lang1txt[i] + "</option>" ); }
+     for (let i in lang2) { elm.lang2.append( "<option value='" +  lang2[i] + "'>" + lang2txt[i] + "</option>"  );  }
+     function translate() {
+      var format = elm
+     .userInput
+     .val()
+     .replace( / /g , '%20');
+      $.getJSON( "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + elm.user.val() + "&tl=" + elm.output.val() + "&dt=t&dt=t&q=" + format,
+      function(JSON) { 
+        let result='';
+        JSON[0].forEach(i=>{
+        if(i[0] && i[0][0]){
+         result +=i[0];
+         }
+        }); 
+        var convert = elm.langOutput.val(result);} ); }
+      $("#translate").on("click", function() { translate(); });
+      $("#clear").on("click", function() {
+        elm.userInput.val(null);
+        elm.langOutput.val();
+      });
+      setInterval(function() {  
+      $("#from").text(
+      $("#lang1").val() );
+      $("#to").text(
+      $("#lang2").val() );}, 10); });
+      </script>
+      </head>
+<body>  
+    <center><font size=40>Translator</font></center>
+     <div id="container"> 
+     <div class="select-lang">   
+     <span><select id="lang1"></select></span>
+     <span> <i class="fa fa-exchange"></i> </span>
+     <span><select id="lang2"></select></span>  
+     </div>
+     <div class="translater-text">
+     <textarea id="user" placeholder="Enter text here..."></textarea>
+     <button id="clear"><i class="fa fa-trash"></i> CLEAR</button>
+     <button id="translate">Translate</button>
+     </div>
+     </div>
+     <div class="output">
+<textarea id="output" placeholder="Translated text here" readonly></textarea>
+<span> </span> 
+</div>  
+</body>
+</html>

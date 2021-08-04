@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body
+            {
+                 background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2VhJTIwYmFja2dyb3VuZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80.jpg");
+                 background-repeat: no-repeat;
+                 background-size: 100% 100%;
+                 background-attachment: fixed;
+            }
+            div1
+            {
+                    width: 40%;
+                    height: 40%;
+                    float: left;
+                    margin-top: 70px;
+                    margin-left: 30px;
+                    opacity: 0.5;
+            }
+            div2
+            {
+              width: 350px;
+              height: 300px;
+              float: right;
+              margin-top: -440px;
+              margin-right: 100px;
+              border-radius: 15px;
+              border: 1px solid lightgray;
+              box-shadow: 4px 4px 5px black;
+              background-image: url("https://st4.depositphotos.com/2339653/i/600/depositphotos_294491578-stock-photo-blue-sky-background-and-soft.jpg");
+              background-repeat: no-repeat;
+              background-size: 100% 100%;
+              background-attachment: fixed;
+              padding-left: 20px;
+              padding-top: 15px;
+              opacity: 0.6;
+            }
+            input
+            {
+               width: 60%;
+               height: 25px;
+               padding-left: 7px;
+               color: black;
+               border: 1px solid black;
+               border-radius: 4px;
+            }
+            input[type=submit]
+            {
+                height: 23px;
+                background-color: transparent;
+                width: 25%;
+                border: 1px solid black;
+                box-shadow: 2px 2px 5px black;
+            }
+            .google-button 
+            {
+                width: 184px;
+                height: 42px;
+                background-color: #4285f4;
+                border-radius: 2px;
+                box-shadow: 0 3px 4px 0 rgba(0,0,0,.25);
+            }
+            .google-icon-wrapper 
+            {
+                float: left;
+                margin-top: 1px;
+                margin-left: 1px;
+                width: 40px;
+                height: 40px;
+                border-radius: 2px;
+                background-color: white;
+            }
+            .google-icon
+            {
+                align-items: center;
+                margin-top: 11px;
+                margin-left: 10px;
+                width: 18px;
+                height: 18px;
+            }
+            .google-button
+            {
+                float: left;
+                margin: 11px 11px 0 0;
+                color: black;
+                font-size: 15px;
+                letter-spacing: 0.2px;
+                padding-right: 2px;
+            }
+            .box
+            {
+                width: 90px;
+                height: 20px;
+                margin-left: 40px;
+                margin-top: 48px;
+                border: 2px solid black;
+                border-left: 0px;
+                box-shadow: 1px 1px 5px black;
+                padding-left: 3px;
+            }
+            .box-1
+            {
+                width: 110px;
+                height: 20px;
+                margin-left: 40px;
+                margin-top: 2px;
+                border: 2px solid black;
+                border-left: 0px;
+                box-shadow:  1px 1px 5px black;
+                padding-left: 3px;
+            }
+            .facebook-icon
+            {
+               cursor: pointer;
+               margin-left: 37px;
+               margin-top: 350px;
+            }
+            .linkedin-icon
+            {
+                cursor: pointer;
+                margin-left: 37px;
+                margin-top: 17px;
+            }
+            .instagram-icon
+            {
+                cursor: pointer;
+                margin-left: 37px;
+                margin-top: 20px;
+            }
+            i
+            {
+                color: black;
+                opacity: 0.4;
+            }
+            .fa
+            {
+               font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+        <b> EXPOSYS</b>
+        </div>
+        <div class="box-1">
+        <b>DATA LABS</b>
+        </div>
+        <table>
+        <tr>
+        <div1>
+            <font size=20px color="black">Always remember that you are absolutely unique. Just like everyone else !</font>
+        </div1></tr>
+        <tr>
+        <div class="facebook-icon"><a href="https://www.facebook.com/Exposysdatalabs"><i class="fa fa-facebook"></i></a></div> 
+        </tr>
+        <tr>
+        <div class="linkedin-icon"><a href="https://www.linkedin.com/company/upchat-technologies/"><i class="fa fa-linkedin"></i></a></div>   
+        </tr>
+        <tr>
+        <div class="instagram-icon"><a href="https://www.instagram.com/exposysdatalabs/"><i class="fa fa-instagram"></i></a></div>
+        </tr>
+        </table>
+        <div2>
+           <form action="search.html" method="GET">
+               <font size=5px color="red">Sign up</font> <br> <br>
+               First Name:&nbsp<input type="text" placeholder="Enter First Name" required>  <br><br>
+               Last Name:&nbsp<input type="text" placeholder="Enter Last Name" required> <br> <br>
+               Password:&nbsp&nbsp&nbsp<input type="password" placeholder="Enter Password" minlength="8" required> <br> <br>
+              <center><abbr title="Login"><input type="submit" value="Login"></abbr></center> <br>           
+            </form>
+            <table align="center">
+            <tr>
+            <td><font size=4px>or</font></td>
+            <td><div3 class="google-button" style="align-items: center;">
+                    <div3 class="google-icon-wrapper">
+                    <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg">
+                    </div3>
+                    <p class="button-text"><b><a href="users.html"> Sign in with google </a></b></p>
+            </div3></td>
+            </tr>
+            </table>
+        </div2>
+    </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <style>
+             body
+             {
+                background-image: url("https://images.unsplash.com/photo-1422493757035-1e5e03968f95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-attachment: fixed;
+             }
+             .field
+             {
+                 background-image: linear-gradient(to right pink,orange);
+                 border-radius: 10px;
+                 margin-top: 10px;
+                 width: 300px;
+                 height: 340px;
+                 opacity: 0.5;
+             }
+             input
+             {
+               height: 30px;
+               padding-left: 3px;
+               color: black;
+               border: 1px solid black;
+               border-radius: 4px;
+               padding-left: 7px;
+             }
+             input[type=submit]
+             {
+                height: 30px;
+                background-color: transparent;
+                width: 25%;
+                border: 2px solid black;
+                font-size: 17px;
+                font-family: sans-serif;
+                color: blue;
+             }
+             input[type=submit]:hover
+             {
+                width: 30%;
+                height: 35px;
+                box-shadow: 2px 2px 2px black;
+             }
+             .home-icon
+             {
+                cursor: pointer;
+                margin-top: 30px;
+                opacity: 0.8;
+                margin-left: 30px;
+             }
+             .About
+             {
+                background-image: linear-gradient(to right,white,lightblue,white);
+                margin-top: -50px;
+                margin-left: 5px;
+                width: 1200px;
+                height: 200px;
+                padding-left: 4px;
+                border-radius: 10px;
+                opacity: 0.5;
+             }             
+    </style>
+</head>
+    <body>
+       <div class="home-icon"><a href="index.html"><i class="fa fa-home"></i></a></div>
+       <center><div class="field">
+          <form action="search.html" method="GET">
+          <font size=5px color="black"><b>Enter The Details To Continue To Our Website</b></font>  <br><br><br>
+          <font size=5px>Email:<br>
+          <input type="email" placeholder="Enter Email" required size="15">  <br> <br>
+          Date of birth:<br>
+          <input type="date" required>  <br> <br>
+          <abbr title="Click to move to next page"><input type="submit" value="Next"></abbr>
+        </font>
+       </div></center> <br> 
+       <div class="About">
+       <font color="black"><h1>Exposys Data Labs</h1></font>
+       <font color="black">Exposys Data Labs aims to Solve real world business problems like Automation, Big Data and data Science. 
+       Their core team of experts in various technologies help businesses to identify issues,oppurtunities and prototype 
+       solutions using trending technologies like AI, ML, Deep Learning and Data Science. They follow a human-focussed  
+       and not technology driven approach to achieve success in our clients endeavours. <br> <br>
+       <i><b>“Our discoveries are beyond belief and if you’re with us, you’ll discover a newer way to think!”</b></i> <br>
+       <b>Their Mission- </b><br>
+       To Tap and train best brainpower to give solutions for real challenges of the world
+      </font>
+      </div>
+    </body>
+</html>
